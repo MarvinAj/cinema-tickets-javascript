@@ -1,9 +1,7 @@
-import express from 'express';
-
-const app = express();
+import startApp from './appStart/StartApp.js';
+import setupRoutes from './pairtest/routes/RouteSetup.js';
+import errorHandler from './pairtest/middleware/errorHandling/ErrorHandler.js';
 
 const port = process.env.PORT || 3000;
 
-app.server = app.listen(port, () => {
-  console.log(`Running on port ${port}`);
-});
+startApp(setupRoutes, errorHandler, port);

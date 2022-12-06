@@ -7,15 +7,16 @@ export const errorLogger = (err, req, res, next) => {
 };
 
 export const errorResponder = (err, req, res, next) => {
-  res.header('Content-Type', 'application/json');
+  // res.header('Content-Type', 'application/json');
 
   let error = err;
   if (!err.statusCode) {
     error = new InternalServerError(err.message);
   }
-  res.status(error.statusCode).send(JSON.stringify(error, null, 4));
+  res.status(error.statusCode);
+  res.send(JSON.stringify(error, null, 4));
 };
 
 export const invalidPathHandler = (req, res, next) => {
-  res.redirect('/error');
+  res.redirect('/invalid');
 };
