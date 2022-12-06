@@ -7,12 +7,31 @@
   },
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src/app.js",
+    "start": " nodemon src/app.js"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "watch": [
+      "src/*"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
+  },
+  "dependencies": {
+    "express": "latest"
   },
   "devDependencies": {
     "eslint": "latest",
     "eslint-config-airbnb-base": "latest",
     "eslint-plugin-import": "latest",
-    "mocha": "latest"
+    "mocha": "latest",
+    "nodemon": "latest"
   }
 }
