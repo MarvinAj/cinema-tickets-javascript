@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint src/app.js",
     "start": " nodemon src/app.js",
-    "test": " mocha tests/**/*Tests.js"
+    "test": " mocha test/**/*Tests.js"
   },
   "nodemonConfig": {
     "restartable": "rs",
@@ -26,7 +26,8 @@
     }
   },
   "dependencies": {
-    "express": "latest"
+    "express": "latest",
+    "body-parser": "latest"
   },
   "devDependencies": {
     "eslint": "latest",
@@ -36,6 +37,9 @@
     "should": "latest",
     "sinon": "latest",
     "supertest": "latest",
-    "nodemon": "latest"
+    "nodemon": "latest",
+    "chai": "latest",
+    "proxyquire": "latest",
+    "sinon-chai": "latest"
   }
 }
