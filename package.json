@@ -8,7 +8,8 @@
   "type": "module",
   "scripts": {
     "lint": "eslint src/app.js",
-    "start": " nodemon src/app.js"
+    "start": " nodemon src/app.js",
+    "test": " mocha tests/**/*Tests.js"
   },
   "nodemonConfig": {
     "restartable": "rs",
@@ -32,6 +33,9 @@
     "eslint-config-airbnb-base": "latest",
     "eslint-plugin-import": "latest",
     "mocha": "latest",
+    "should": "latest",
+    "sinon": "latest",
+    "supertest": "latest",
     "nodemon": "latest"
   }
 }
