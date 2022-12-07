@@ -7,10 +7,42 @@
   },
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src/app.js",
+    "start": " nodemon src/app.js",
+    "test": " mocha test/**/*Tests.js"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "watch": [
+      "src/*"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
+  },
+  "dependencies": {
+    "express": "latest",
+    "body-parser": "latest",
+    "express-validator": "latest",
+    "json-rules-engine": "latest"
   },
   "devDependencies": {
-    "jest": "28.1.1",
-    "mocha": "10.0.0"
+    "eslint": "latest",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "latest",
+    "mocha": "latest",
+    "should": "latest",
+    "sinon": "latest",
+    "supertest": "latest",
+    "nodemon": "latest",
+    "chai": "latest",
+    "proxyquire": "latest",
+    "sinon-chai": "latest",
+    "chai-as-promised": "latest"
   }
 }
