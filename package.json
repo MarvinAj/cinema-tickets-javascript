@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "express": "latest",
-    "body-parser": "latest"
+    "body-parser": "latest",
+    "express-validator": "latest"
   },
   "devDependencies": {
     "eslint": "latest",

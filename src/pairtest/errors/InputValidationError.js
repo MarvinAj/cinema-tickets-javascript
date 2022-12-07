@@ -1,5 +1,5 @@
-import { StatusCodeMessage, StatusCode } from './StatusCode';
-import BaseError from './BaseError';
+import { StatusCodeMessage, StatusCode } from './StatusCode.js';
+import BaseError from './BaseError.js';
 
 export default class InputValidationError extends BaseError {
   // eslint-disable-next-line max-len

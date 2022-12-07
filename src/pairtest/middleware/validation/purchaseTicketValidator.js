@@ -1,6 +1,6 @@
 /* eslint-disable default-case */
 import { check, validationResult } from 'express-validator';
-import InputValidationError from '../../errors/InputValidationError';
+import InputValidationError from '../../errors/InputValidationError.js';
 
 // eslint-disable-next-line consistent-return
 export const validateRequestBody = (method) => {

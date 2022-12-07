@@ -1,5 +1,5 @@
-import { StatusCodeMessage } from './StatusCode';
-import BadRequestError from './BadRequestError';
+import { StatusCodeMessage } from './StatusCode.js';
+import BadRequestError from './BadRequestError.js';
 
 export default class InvalidPurchaseException extends BadRequestError {
   // eslint-disable-next-line max-len
