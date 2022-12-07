@@ -20,7 +20,7 @@ describe('TicketTypeRequest Tests', () => {
     expect(() => { ticketTypeRequest = new TicketTypeRequest('UNKNOWN', 1); }).to.throw(TypeError);
   });
 
-  it('Should thrown TypeError if value is not a number type', () => {
+  it('Should thrown TypeError if value is not of type integer', () => {
     expect(() => { ticketTypeRequest = new TicketTypeRequest(TicketType.ADULT, 'Number'); }).to.throw(TypeError);
   });
 

@@ -24,12 +24,12 @@ describe('TicketPriceRequest Tests', () => {
     expect(() => { ticketPriceRequest = new TicketPriceRequest(TicketType.ADULT, 'Number'); }).to.throw(TypeError);
   });
 
-  it('Should return getter noOfTickets value for new instance', () => {
+  it('Should return getter getPrice value for new instance', () => {
     ticketPriceRequest = new TicketPriceRequest(TicketType.CHILD, 1);
     expect(ticketPriceRequest.getPrice()).to.equal(10);
   });
 
-  it('Should return getter ticketType value for new instance', () => {
+  it('Should return getter getTotalPrice value for new instance', () => {
     ticketPriceRequest = new TicketPriceRequest(TicketType.ADULT, 2);
     expect(ticketPriceRequest.getTotalPrice()).to.equal(40);
   });
