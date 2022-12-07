@@ -42,6 +42,7 @@
     "nodemon": "latest",
     "chai": "latest",
     "proxyquire": "latest",
-    "sinon-chai": "latest"
+    "sinon-chai": "latest",
+    "chai-as-promised": "latest"
   }
 }
