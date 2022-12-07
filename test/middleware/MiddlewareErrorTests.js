@@ -1,7 +1,7 @@
 import 'should';
 import sinon from 'sinon';
 import { StatusCode } from '../../src/pairtest/errors/StatusCode.js';
-import { errorLogger, errorResponder, invalidPathHandler } from '../../src/pairtest/middleware/errorHandling/MiddlewareError.js';
+import { errorLogger, errorResponder } from '../../src/pairtest/middleware/errorHandling/MiddlewareError.js';
 import BadRequestError from '../../src/pairtest/errors/BadRequestError.js';
 import BaseError from '../../src/pairtest/errors/BaseError.js';
 
@@ -62,11 +62,4 @@ describe('MiddlewareError Tests:', () => {
       res.status.calledWith(StatusCode.INTERNAL_SERVER).should.equal(true);
     });
   });
-
-//   describe('invalidPathHandler', () => {
-//     it('should redirect invalid routes', () => {
-//       invalidPathHandler(error, {}, res, next);
-//       res.redirect.calledWith('/invalid').should.equal(true);
-//     });
-//   });
 });
