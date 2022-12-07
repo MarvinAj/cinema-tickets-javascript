@@ -1,18 +1,13 @@
 import crypto from 'crypto';
+import Order from './Order.js';
 
 /* Immutable Object */
-class TicketOrder {
-  #Id;
-
-  #totalCost;
-
+class TicketOrder extends Order {
   #totalNumberOfTickets;
 
   #totalNumberOfSeats;
 
   constructor(totalNumberOfTickets = 0, totalCost = 0, totalNumberOfSeats = 0) {
-    this.#Id = crypto.randomBytes(16).toString('hex');
-
     if (!Number.isInteger(totalNumberOfTickets)) {
       throw new TypeError('totalNumberOfTickets must be an integer');
     }
@@ -25,23 +20,16 @@ class TicketOrder {
       throw new TypeError('totalNumberOfSeats must be an integer');
     }
 
+    super(totalCost);
+
     this.#totalNumberOfTickets = totalNumberOfTickets;
-    this.#totalCost = totalCost;
     this.#totalNumberOfSeats = totalNumberOfSeats;
 
     Object.seal(this);
   }
 
-  getTotalCost() {
-    return this.#totalCost;
-  }
-
   getTotalNumberOfTickets() {
     return this.#totalNumberOfTickets;
-  }
-
-  getId() {
-    return this.#Id;
   }
 
   getTotalNumberOfSeats() {

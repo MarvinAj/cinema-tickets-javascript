@@ -42,4 +42,17 @@ describe('TicketOrder Tests', () => {
   it('Should return getter totalCost value', () => {
     expect(ticketOrder1.getTotalNumberOfSeats()).to.equal(4);
   });
+
+  it('order id should never be empty', () => {
+    expect(ticketOrder1.getId()).should.not.be.empty();
+  });
+
+  it('should have the totalcost of the value passed to the constructor', () => {
+    expect(ticketOrder1.getTotalCost()).to.equal(60);
+  });
+
+  it('should update totalcost', () => {
+    ticketOrder1.updateCost(100);
+    expect(ticketOrder1.getTotalCost()).to.equal(160);
+  });
 });
