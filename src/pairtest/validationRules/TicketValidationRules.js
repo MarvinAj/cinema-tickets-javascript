@@ -1,4 +1,4 @@
-import InvalidPurchaseException from '../errors/InvalidPurchaseException';
+import InvalidPurchaseException from '../errors/InvalidPurchaseException.js';
 
 const ticketRules = [
   {

@@ -28,7 +28,8 @@
   "dependencies": {
     "express": "latest",
     "body-parser": "latest",
-    "express-validator": "latest"
+    "express-validator": "latest",
+    "json-rules-engine": "latest"
   },
   "devDependencies": {
     "eslint": "latest",
