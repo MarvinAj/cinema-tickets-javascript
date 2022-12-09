@@ -18,6 +18,22 @@ describe('App server Tests', () => {
   });
 
   describe('/POST tickets', () => {
+    it('Should get ticket for a single adult', (done) => {
+      appStart
+        .get('/wrong')
+        .send({
+          accountId: 1,
+          tickets: {
+            adult: 1,
+          },
+        })
+        .end((err, res) => {
+          res.status.should.be.equal(200);
+          res.body.should.have.property('url');
+          done();
+        });
+    });
+
     it('Should purchase tickets', (done) => {
       appStart
         .post('/tickets')

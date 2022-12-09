@@ -1,5 +1,4 @@
-import { expect, assert } from 'chai';
-import express from 'express';
+import { expect } from 'chai';
 import setupRoutes from '../../src/pairtest/routes/RouteSetup.js';
 
 describe('RouteSetup Tests', () => {
