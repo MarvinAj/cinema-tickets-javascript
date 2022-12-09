@@ -2,7 +2,7 @@ import InternalServerError from '../../errors/InternalServerError.js';
 
 /* eslint-disable no-unused-vars */
 export const errorLogger = (err, req, res, next) => {
-  console.error('\x1b[31m', err);
+  // console.error('\x1b[31m', err);
   next(err);
 };
 

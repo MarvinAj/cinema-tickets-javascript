@@ -7,19 +7,22 @@ const startApp = (setupRoutes, errorHandler, port = 3000) => {
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
 
-  if (setupRoutes) {
-    setupRoutes(app);
+  if (typeof setupRoutes !== 'function') {
+    throw TypeError('setupRoutes function is required');
   }
 
-  if (errorHandler) {
-    errorHandler(app);
+  if (typeof errorHandler !== 'function') {
+    throw TypeError('errorHandler function is required');
   }
+
+  setupRoutes(app);
+  errorHandler(app);
 
   app.server = app.listen(port, () => {
     console.log(`Running on port ${port}`);
   });
 
-  return app.server;
+  return app;
 };
 
 export default startApp;

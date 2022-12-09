@@ -34,7 +34,7 @@ describe('TicketOrderRequest Tests', () => {
   });
 
   it('Should thrown TypeError if ticketOrderRequest array contains an element with a wrong type', () => {
-    expect(() => { ticketOrderRequest1 = new TicketOrderRequest(1, ['hello']); }).to.throw(TypeError);
+    expect(() => { ticketOrderRequest1 = new TicketOrderRequest(1, ['hello', '', 1]); }).to.throw(TypeError);
   });
 
   it('Should thrown TypeError if ticketOrderRequest array is Empty', () => {

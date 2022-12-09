@@ -43,6 +43,7 @@
     "chai": "latest",
     "proxyquire": "latest",
     "sinon-chai": "latest",
-    "chai-as-promised": "latest"
+    "chai-as-promised": "latest",
+    "chai-http": "latest"
   }
 }
